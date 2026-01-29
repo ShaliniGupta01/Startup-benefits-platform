@@ -8,7 +8,7 @@ export default function DealsPage() {
   const [deals, setDeals] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/deals")
+    fetch("https://backend-startup-benefit-platform.onrender.com/api/deals")
       .then((res) => res.json())
       .then((data) => {
         setDeals(data.deals || data);
